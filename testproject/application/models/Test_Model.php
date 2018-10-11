@@ -147,6 +147,23 @@ class Test_Model extends CI_Model
 
     }
 
+    public function serachemail()
+    {
+          $findkey=$this->input->post('tbsearch');
+        $this->db->like('email', $findkey, 'after');
+        $this->db->or_like('firstname', $findkey, 'after'); 
+        $this->db->or_like('lastname', $findkey, 'after');  
+        $query=$this->db->get('UserData');
+        if($query->num_rows()>0)
+        {
+            return $query->result();
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
 }
 

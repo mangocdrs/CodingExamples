@@ -92,12 +92,19 @@ class Formcontroller extends CI_Controller
 
     }
 
-    public function test1()
+    public function getsearch()
     {
+       $this->load->model('Test_Model');
+         $this->Test_Model->serachemail();
+		$this->Test_Model->selectuser();
+		$data['tbldata']=$this->Test_Model->serachemail();
+		$data['pic']=$this->Test_Model->selectuser();
+		
+		$this->load->view('loginview', $data);
 
-    	$this->load->view("testpopup");
-    	
+   
     }
+    
 		
 
 }

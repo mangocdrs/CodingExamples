@@ -62,14 +62,42 @@
 			 
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			 	 <a href="<?php echo base_url()."Formcontroller/adduser"?>" class="btn btn-default btn-danger ">Adduser</a>	
-		 	
+			 	 <a  href="<?php echo base_url()."Formcontroller/adduser"?>" class="btn btn-default btn-danger ">Adduser</a>	
+		 	</form> 
 		 		
 		 
 			 <br>
 			 <br>
 			 <br>
+			 <form id="myform2" action="<?php echo base_url();?>Formcontroller/getsearch" method="POST">
+			 	<div>
+			 		<div class="col-md-5 pull-right">
+                   <button type="submit" class="btn btn-default btn-danger " name="btnsearch"   value="search"> Search </button> 
+					 </div>
+					 <div class="pull-right  col-md-7">
+						<input type="text" class="form-control" name="tbsearch">
+					</div>
+					</div>
+
+					<a class="btn btn-default btn-danger pull-right" href="<?php echo base_url()."Formcontroller/index"?>">	Show All
+					</a>
+					
+
+				
+				
+</form>
+
+
+
+			
 		 </div>
+	
+		 <br>
+		 <br>
+		 <br>
+		 <br>
+		 <br>
+		 <br>
 		 <br>
 		 <br>
 		 <div align="center">
@@ -132,7 +160,7 @@
 					</tbody>
 
 					 </table>
-					 	</form>
+					
 					</div>
 
 <script>
