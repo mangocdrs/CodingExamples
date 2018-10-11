@@ -45,7 +45,7 @@
 
 			
 			 	<br> &emsp; &emsp; 
-			 	<img  src="<?php echo base_url();?>assets/images/<?php echo $pic;?>" style="width:100px;height:100px; border-radius:55px;">
+			 	<img  src="<?php echo base_url();?>assets/images/<?php echo $pic;?>" style="width:100px;height:100px; border-radius:55px;"  onerror="this.src='<?php echo base_url();?>assets/images/default.jpeg';">
 		<div class="clearfix"></div>
 			    <br>
 			 	<input id="tbem"  placeholder="Enter Email Id"    name="userid" >
@@ -110,7 +110,7 @@
 					<th>FirstName</th>
 					<th>LastName</th>
 					<th>Email</th>
-					<th>Password</th>
+					<!-- <th>Password</th> -->
 					<th>DOB</th>
 					<th>Image</th>
 					<th>Edit</th>
@@ -127,7 +127,7 @@
 					     <td><?php echo $row->firstname;?></td>                                       
 					     <td><?php echo $row->lastname; ?></td>
 					     <td><?php echo $row->email; ?></td>
-					     <td><?php echo $row->password; ?></td>
+					    <!--  <td><?php echo $row->password; ?></td> -->
 					     <td><?php echo $row->dob;?> </td>
 					      <td> 
 					     <img src="<?php echo base_url();?>assets/images/<?php echo $row->userimage;?>" width="50" height="40">

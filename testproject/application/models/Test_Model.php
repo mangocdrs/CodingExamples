@@ -103,15 +103,82 @@ class Test_Model extends CI_Model
 
     public function updateuser($id)
     {
-        $this->firstname=$this->input->post('ufname');
-		$this->lastname=$this->input->post('ulname');
-		$this->email=$this->input->post('uemail');
-		$this->password=$this->input->post('upassword');
-		$this->dob=$this->input->post('udob');
-		$this->userimage=$this->input->post('uimg');
-        $this->db->get('UserData');
-        $this->db->where('id',$id );
-        $this->db->update('UserData', $this);
+        $firstname=$this->input->post('ufname');
+        $lastname=$this->input->post('ulname');
+        $email=$this->input->post('uemail');
+        $password=$this->input->post('upassword');
+        $dob=$this->input->post('udob');
+        $userimage=$this->input->post('uimg');
+        $pass=$this->input->post('upassword');
+        $img=$this->input->post('uimg');
+
+        
+        if(empty($pass) && empty($img))
+        {
+
+            $data=array
+            (
+                'firstname' =>$firstname,
+                'lastname' => $lastname,
+                'email' =>$email,
+                'dob' =>$dob,
+                 );
+                $this->db->get('UserData');
+                $this->db->where('id',$id );
+                $this->db->update('UserData', $data);
+
+        }
+        elseif (empty($pass)) 
+        {
+            $data=array
+            (
+                'firstname' =>$firstname,
+                'lastname' => $lastname,
+                'email' =>$email,
+                'dob' =>$dob,
+                'userimage' =>$userimage
+                 );
+                $this->db->get('UserData');
+                $this->db->where('id',$id );
+               
+                $this->db->update('UserData', $data);
+ 
+        }
+        elseif (empty($img)) 
+        {
+             $data=array
+            (
+                'firstname' =>$firstname,
+                'lastname' => $lastname,
+                'email' =>$email,
+                'password' =>$password,
+                'dob' =>$dob
+            
+                 );
+                $this->db->get('UserData');
+                $this->db->where('id',$id );
+               
+                $this->db->update('UserData', $data);
+            
+        }
+        else
+        {
+             $data=array
+            (
+                'firstname' =>$firstname,
+                'lastname' => $lastname,
+                'email' =>$email,
+                'password' =>$password,
+                'dob' =>$dob,
+                'userimage' =>$userimage
+                 );
+                $this->db->get('UserData');
+                $this->db->where('id',$id );
+               
+                $this->db->update('UserData', $data);
+
+
+        }
 
         if($this->db->affected_rows() == '1')
         {

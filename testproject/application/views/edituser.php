@@ -20,7 +20,7 @@
 {
 	background-color: #00FFFF;
 	width: 500px;
-	height:580px;
+	height:700px;
 	margin:auto;
 	border: 2px solid black;
 }
@@ -50,18 +50,29 @@
 			 	foreach ($field as $rows) { ?>
 			 	
 			 	<br>
+			 	<div class="col-md-10">
+			 	<label for="ufname">Enter first name</label>
+			 	  <br>
 			 	<input id="tbfn" type="text" placeholder="Enter firstname" value="<?php echo $rows->firstname;?>" name="ufname" >
 			 	<br>
 			 	<br>
+			 	<label for="ufname">Enter last name</label>
+			 	  <br>
 			 	<input id="tbln" type="text" placeholder="Enter lastname" value="<?php echo $rows->lastname;?>" name="ulname">
 			 	<br>
 			    <br>
+			    <label for="ufname">Enter email</label>
+			      <br>
 			 	<input id="tbem" type="text" placeholder=" Enter email" value="<?php echo $rows->email;?>" name="uemail" size="20">
 			 	<br>
 			 	<br>
-			 	<input id="tbpa" type="password" placeholder="Enter password" value="<?php echo $rows->password; ?>" name="upassword">
+			 	 <label for="ufname">Enter  password</label>
+			 	   <br>
+			 	<input id="tbpa" type="password" placeholder="Enter New password" value="<?php echo $rows->password; ?>" name="upassword">
 			 	<br>
 			    <br>
+			     <label for="ufname">Enter  dob</label>
+			       <br>
 			 	<input id="tbdo" type="date" placeholder="Enter Dob" name="udob" value="<?php echo $rows->dob;?>" style="width: 178px;">
 			 	<br>
 			    <br>
@@ -116,11 +127,11 @@ $("#myform").validate({
 
       		required: true
 
-      },
-      uimg:{
-
-      		required: true
       }
+      // uimg:{
+
+      // 		required: true
+      // }
  
 
     },

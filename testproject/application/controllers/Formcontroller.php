@@ -68,21 +68,15 @@ class Formcontroller extends CI_Controller
         $btnclick=$this->input->post("btnupdate");
 		if($btnclick == 'update')
         {
-	        $pass=$this->input->post('upassword');
-	        if(!empty($pass))
-	        {
-	         		
+	       		
 	            $this->updatedata();
 		        $id=$this->input->get('id');
 		        redirect("Formcontroller/setdata?id=$id");
 		        echo "Data updated";
-	        }
-	        else
-	        {
-	         	redirect("Formcontroller/index");
-	        }
-        }
+		    }
 
+	      
+      
     }
     public function updatedata()
     {
