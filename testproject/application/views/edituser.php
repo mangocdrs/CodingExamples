@@ -89,7 +89,7 @@
 				<p align="text-align: center;">
 				<button class="btn btn-info" type="submit" name="btnupdate"   value="update">update</button>
 			
-				<a href="<?php echo base_url()."Formcontroller/index"?>" class="btn btn-danger">Back</a>
+				<a href="<?php echo base_url()."formcontroller/index"?>" class="btn btn-danger">Back</a>
 				</p>
 					<?php  } ?>
 		</form>

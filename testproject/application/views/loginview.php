@@ -62,7 +62,7 @@
 			 
 <br>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			 	 <a  href="<?php echo base_url()."Formcontroller/adduser"?>" class="btn btn-default btn-danger ">Adduser</a>	
+			 	 <a  href="<?php echo base_url()."formcontroller/adduser"?>" class="btn btn-default btn-danger ">Adduser</a>	
 		 	</form> 
 		 		
 		 
@@ -73,14 +73,15 @@
 			 	<div>
 			 		<div class="col-md-5 pull-right">
                    <button type="submit" class="btn btn-default btn-danger " name="btnsearch"   value="search"> Search </button> 
+                   <a class="btn btn-default btn-danger pull-right" href="<?php echo base_url()."formcontroller/index"?>">	Show All
+					</a>
 					 </div>
 					 <div class="pull-right  col-md-7">
 						<input type="text" class="form-control" name="tbsearch">
 					</div>
 					</div>
 
-					<a class="btn btn-default btn-danger pull-right" href="<?php echo base_url()."Formcontroller/index"?>">	Show All
-					</a>
+					
 					
 
 				
@@ -132,7 +133,7 @@
 					      <td> 
 					     <img src="<?php echo base_url();?>assets/images/<?php echo $row->userimage;?>" width="50" height="40">
 					     </td>
-					      <td><a href="<?php echo base_url()."Formcontroller/setdata?id=".$row->id ?>" <button class="btn btn-info" name="btnedit">Edit</button></td> </a>
+					      <td><a href="<?php echo base_url()."formcontroller/setdata?id=".$row->id ?>" <button class="btn btn-info" name="btnedit">Edit</button></td> </a>
 					    
 					      <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" >Delete</a>
 					      </button></td>
@@ -148,7 +149,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-           <a href="<?php echo base_url()."Formcontroller/deleteuser?id=".$row->id ?>" class="btn btn-danger">Yes</a>
+           <a href="<?php echo base_url()."formcontroller/deleteuser?id=".$row->id ?>" class="btn btn-danger">Yes</a>
             </div>
         </div>
     </div>

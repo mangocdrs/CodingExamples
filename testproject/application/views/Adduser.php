@@ -66,10 +66,10 @@
 		    <p align="text-align: center;">
 			<button type="submit" name="btnaddu" class="btn btn-default btn-danger" value="adding" >Adduser</button>
 		
-			<a href="<?php echo base_url()."Formcontroller/index"?>" class="btn btn-danger">Back</a>
+			<a href="<?php echo base_url()."formcontroller/index"?>" class="btn btn-danger">Back</a>
 			</p>
 			<br>
-			<!-- <a href="<?php echo base_url()."Formcontroller/index"?>" class="btn btn-default btn-danger  ">Login</a>	 -->
+			<!-- <a href="<?php echo base_url()."formcontroller/index"?>" class="btn btn-default btn-danger  ">Login</a>	 -->
 	 	</form>
 	</div>
 
